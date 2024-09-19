@@ -22,12 +22,26 @@
   <header>
     <nav id="navbar">
       <section class="navbar-content">
-
-        <!-- <a href="#" id="search">
-          <span class="material-symbols-outlined">search</span>
-        </a> -->
-        <p class="brand-name" id="brand-name"><a href="#">Siman</a></p>
-        <section class="nav-icons">
+        <!-- Menú de 3x3 puntitos -->
+        <div id="toggleMenu" class="menu-icon">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+  
+        <p class="brand-name" id="brand-name">
+          <a href="#">
+            Siman
+            <span class="material-symbols-outlined" style="rotate: 45deg;">stop</span>
+          </a>
+        </p>
+        <section class="nav-icons original-icons">
           <a href="#" class="icon">
             <span class="material-symbols-outlined">shopping_cart</span>
           </a>
@@ -35,15 +49,20 @@
             <span class="material-symbols-outlined">search</span>
           </a>
         </section>
+        <section class="nav-icons new-icons">
+          <a href="#" class="icon">Cuenta  <i class="bi bi-person"></i></a>
+          <a href="#" class="icon">Contactanos  <i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="icon">Categorias <i class="bi bi-tag"></i></a>          
+        </section>
       </section>
     </nav>
-    <section class="hero-image">
+    <section class="hero-image" style="background-image: url('./static/img/placeholder.webp')">
       <div class="hero-text">
         <h1 id="hero-brand-name">Siman</h1>
       </div>
     </section>
-
   </header>
+  
 
   
 
@@ -126,14 +145,18 @@
         </figure>
       </section>
       <section class="dashboard-item small">
-        <figure class="figureimg">
+        <picture class="figureimg">
+          <source media="(max-width: 600px)" srcset="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/8b9ccdd0-dec0-4302-8a54-86ed0a60cda1___b7fd9038e460696322e3cd9f0f431316.jpg">
+          <source media="(max-width: 1000px)" srcset="static/img/small_1.webp">
           <img src="static/img/small_1.webp">
-        </figure>
+        </picture>
       </section>
       <section class="dashboard-item small">
-        <figure class="figureimg">
+        <picture class="figureimg">
+          <source media="(max-width: 600px)" srcset="https://siman.vtexassets.com/assets/vtex.file-manager-graphql/images/5b6e40f0-557b-4ee2-bea6-f2e5b28a2d21___467920bfd94d6dcd884a553e0dc5e1cb.jpg">
+          <source media="(max-width: 1000px)" srcset="static/img/small_2.webp">
           <img src="static/img/small_2.webp">
-        </figure>
+        </picture>
       </section>
     </article>
     <br>
@@ -149,18 +172,18 @@
         <!-- Esto genera una plantilla bonis
         <article class="card">
           <figure>
-            <img src="/static/img/peraphone1.jpg" alt="Pocket Logo">              
+            <img src="/static/img/peraphone1.jpg" alt="Producto bonito">              
           </figure>
       </article> -->
 
         <article class="card">
           <header class="card-header">
             <figure class="image-container">
-              <img src="/static/img/peraphone2.webp" alt="Pocket Logo">
+              <img src="/static/img/peraphone2.webp" alt="Producto bonito">
             </figure>
           </header>
           <section class="card-content">
-            <h2>Pocket logo</h2>
+            <h2>Producto bonito</h2>
             <p>$499.99</p>
             <button class="add-to-cart">
               <span class="plus">+</span>
@@ -171,11 +194,11 @@
         <article class="card">
           <header class="card-header">
             <figure class="image-container">
-              <img src="/static/img/peraphone4.avif" alt="Pocket Logo">
+              <img src="/static/img/peraphone4.avif" alt="Producto bonito">
             </figure>
           </header>
           <section class="card-content">
-            <h2>Pocket logo</h2>
+            <h2>Producto bonito</h2>
             <p>$499.99</p>
             <button class="add-to-cart">
               <span class="plus">+</span>
@@ -185,11 +208,11 @@
         <article class="card">
           <header class="card-header">
             <figure class="image-container">
-              <img src="/static/img/peraphone4.jpg" alt="Pocket Logo">
+              <img src="/static/img/peraphone4.jpg" alt="Producto bonito">
             </figure>
           </header>
           <section class="card-content">
-            <h2>Pocket logo</h2>
+            <h2>Producto bonito</h2>
             <p>$499.99</p>
             <button class="add-to-cart">
               <span class="plus">+</span>
@@ -197,7 +220,7 @@
           </section>
         </article>
       </article>
-      <p><a href="#">Ver mas</a></p>
+      <p><a href="product_details.html">Ver mas</a></p>
     </section>
 
 
@@ -207,10 +230,10 @@
 
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel1.webp" alt="Pocket logo">
+          <img src="static/img/cel1.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -219,10 +242,10 @@
       </figure>
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel2.webp" alt="Pocket logo">
+          <img src="static/img/cel2.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -231,10 +254,10 @@
       </figure>
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel3.webp" alt="Pocket logo">
+          <img src="static/img/cel3.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -243,10 +266,10 @@
       </figure>
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel4.webp" alt="Pocket logo">
+          <img src="static/img/cel4.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -255,10 +278,10 @@
       </figure>
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel5.webp" alt="Pocket logo">
+          <img src="static/img/cel5.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -267,10 +290,10 @@
       </figure>
       <figure class="cardL">
         <figure>
-          <img src="static/img/cel6.webp" alt="Pocket logo">
+          <img src="static/img/cel6.webp" alt="Producto bonito">
         </figure>
         <section class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add">
             Agregar al carrito
@@ -306,10 +329,10 @@
 
       <section class="small-card">
         <figure class="small-card-image-container">
-          <img src="static/img/maleta1.webp" alt="Pocket logo">
+          <img src="static/img/maleta1.webp" alt="Producto bonito">
         </figure>
         <article class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add-to-cart">
             <span class="material-symbols-outlined">add</span>
@@ -319,10 +342,10 @@
 
       <section class="small-card">
         <figure class="small-card-image-container">
-          <img src="static/img/maleta2.webp" alt="Pocket logo">
+          <img src="static/img/maleta2.webp" alt="Producto bonito">
         </figure>
         <article class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add-to-cart">
             <span class="material-symbols-outlined">add</span>
@@ -332,10 +355,10 @@
 
       <section class="small-card">
         <figure class="small-card-image-container">
-          <img src="static/img/maleta3.webp" alt="Pocket logo">
+          <img src="static/img/maleta3.webp" alt="Producto bonito">
         </figure>
         <article class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add-to-cart">
             <span class="material-symbols-outlined">add</span>
@@ -346,10 +369,10 @@
       <section class="small-card">
 
         <figure class="small-card-image-container">
-          <img src="static/img/maleta4.webp" alt="Pocket logo">
+          <img src="static/img/maleta4.webp" alt="Producto bonito">
         </figure>
         <article class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add-to-cart">
             <span class="material-symbols-outlined">add</span>
@@ -359,10 +382,10 @@
 
       <section class="small-card">
         <figure class="small-card-image-container">
-          <img src="static/img/maleta5.webp" alt="Pocket logo">
+          <img src="static/img/maleta5.webp" alt="Producto bonito">
         </figure>
         <article class="small-card-content">
-          <h3>Pocket logo</h3>
+          <h3>Producto bonito</h3>
           <p>$499.99</p>
           <button class="small-card-add-to-cart">
             <span class="material-symbols-outlined">add</span>
@@ -400,17 +423,17 @@
           nisi facilis quam enim amet iusto! Impedit delectus nihil magni consequatur, dolore corrupti sit maxime in?
           
         </p> <br>
-        <a href="#">Ver mas</a></h>      
+        <a href="product_details.html">Ver mas</a></h>      
       </section>
       <section class="dashboard-item large">
       <article class="cards-container">
 
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/EchoDot.webp" alt="Pocket logo">
+            <img src="static/img/EchoDot.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>
@@ -420,10 +443,10 @@
 
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/bascula.webp" alt="Pocket logo">
+            <img src="static/img/bascula.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>
@@ -433,10 +456,10 @@
 
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/ventilador.webp" alt="Pocket logo">
+            <img src="static/img/ventilador.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>
@@ -446,10 +469,10 @@
 
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/licuadora.webp" alt="Pocket logo">
+            <img src="static/img/licuadora.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>
@@ -459,10 +482,10 @@
   
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/lavasecadora.webp" alt="Pocket logo">
+            <img src="static/img/lavasecadora.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>
@@ -472,10 +495,10 @@
   
         <section class="small-card">
           <figure class="small-card-image-container">
-            <img src="static/img/aire.webp" alt="Pocket logo">
+            <img src="static/img/aire.webp" alt="Producto bonito">
           </figure>
           <article class="small-card-content">
-            <h3>Pocket logo</h3>
+            <h3>Producto bonito</h3>
             <p>$499.99</p>
             <button class="small-card-add-to-cart">
               <span class="material-symbols-outlined">add</span>

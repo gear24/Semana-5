@@ -1,6 +1,15 @@
+/*variables
+:root{
+  --ui-light-blue: var(--ui-light-blue);
+  --ui-black: #1f1f1f;
+  --ui-grey: #2f2f2f;
+  --ui-siman-red: #a73a42;
+  --ui-white: #fee;
+}*/
+
 body, html {
     
-    background-color: #1f1f1f;
+    background-color: var(--ui-black);
     margin: 0;
     padding: 0;
   }
@@ -21,7 +30,7 @@ header {
     top: 0;
     width: 100%;
     height: 60px;
-    background-color: #7199fd;
+    background-color: var(--ui-blue);
     display: flex;
     align-items: center;
     padding: 0 20px; /* Ajusta el padding según necesites */
@@ -48,6 +57,7 @@ header {
     flex: 1; /* Ocupa el espacio disponible */
     margin-right: 10%;
     font-family: "Pacifico", cursive;
+    color: var(--ui-white)
   }
   
   .nav-icons {
@@ -60,27 +70,14 @@ header {
   .nav-icons .icon {
     display: flex;
     align-items: center;
-  }
-  
-  #search{
-    margin-right: auto; /* Empuja el ícono de búsqueda hacia el borde izquierdo */
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-  #search span {
-    font-size: 250%; /* Ajusta el tamaño del ícono */
-    /*color: rgb(255, 5, 5);  Color del ícono */
-    
-    opacity: 0.7; /* Fondo transparente para el ícono */
-    transition: opacity 0.3s ease;
+    gap: 10px; /* Espacio entre el texto y el ícono */
   }
 
   .nav-icons .icon span{
     font-size: 250%; /* Ajusta el tamaño de los íconos */
     opacity: 0.7; /* Fondo transparente para los íconos */
     transition: opacity 0.3s ease;
-    color: black;
+    color: var(--ui-white);
   }
   
   .nav-icons .icon span:hover {
@@ -89,7 +86,7 @@ header {
   
 
 .hero-image {
-    background-image: url('../img/placeholder.webp');
+    /* background-image: url('../img/placeholder.webp'); */
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -115,6 +112,88 @@ main {
 
 
 
+/* Menú de 3x3 puntitos */
+.menu-icon {
+  display: grid;
+  grid-template-columns: repeat(3, 6px); /* Tamaño más pequeño */
+  grid-template-rows: repeat(3, 6px);
+  gap: 6px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dot {
+  width: 6px; /* Tamaño más pequeño */
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.7); /* Color más suave */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-icon:hover .dot {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Efecto al hacer click */
+.menu-icon:active .dot {
+  transform: scale(0.8); /* Sutil efecto de encogimiento */
+  background-color: #1f3eaa; /* Cambia a azul al hacer click */
+}
+#toggleMenu{
+  z-index: 10;
+  transition: 0.1s linear;
+}
+
+/* Estilos del nuevo menú */
+/* .nav-icons.new-icons {
+  display: none;
+  position: absolute;
+  right: -100%;
+  transition: right 0.4s ease;
+} */
+.nav-icons.new-icons {
+  display: none;
+  position: fixed;
+  right: -100%;
+  /*transition: right 0.4s ease;*/
+  transition: 0.3s linear;
+}
+
+.nav-icons .original-icons {
+  position: absolute;
+  right: 0;
+  /*transition: right 0.4s ease;*/
+  transition: 0.3s linear;
+}
+
+.nav-icons.slide-out {
+  right: 0;
+  left: 0;
+}
+
+.nav-icons.slide-in {
+  right: -100%;
+}
+
+
+/* Estilos minimalistas para las opciones */
+.nav-icons a {
+  color: var(--ui-white);
+  font-size: 18px;
+  
+  padding: 10px;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-icons a:hover {
+  border-bottom: 2px solid white;
+}
 
 
 
@@ -130,15 +209,35 @@ main {
     }
   
     .brand-name {
-      font-size: 20px; /* Ajusta el tamaño del texto si es necesario */
-      margin-right: 12%;
-      
-      
+      font-size: 20px;
+      margin-right: 12%;      
     }
   
     .nav-icons {
-      right: 10px; /* Ajusta la distancia desde el borde derecho si es necesario */
-      gap: 10px; /* Ajusta el espacio entre los íconos si es necesario */
+      gap: 1px; /* Ajusta el espacio entre los íconos si es necesario */
     }
+    .nav-icons.new-icons {
+      
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+      top: 60px;
+      background: rgba(55, 96, 199, 0.384); /* Fondo translúcido */
+      backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    }
+    .nav-icons.new-icons a{
+      font-size: 19px;
+      
+    }
+    .nav-icons.new-icons a:first-child {
+      margin-left: 5px; /* Ajusta según el espacio necesario */
+    }
+    .hero-text h1 {
+      font-size: 8rem;
+      color: #ff7d50;
+      font-weight: 700;
+      font-style: normal;
+  }
   }
   
+
+
+

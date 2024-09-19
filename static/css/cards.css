@@ -1,3 +1,12 @@
+/*variables
+:root{
+  --ui-light-blue: var(--ui-light-blue);
+  --ui-black: #1f1f1f;
+  --ui-grey: #2f2f2f;
+  --ui-siman-red: #a73a42;
+  --ui-white: #fee;
+}*/
+
 .card, .cards, .small-card{
   font-family: "Amatic SC", sans-serif;
 }
@@ -97,7 +106,8 @@
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    background: linear-gradient(45deg, #333, #777);
+    /*background: linear-gradient(45deg, #333, #777);*/
+    background: linear-gradient(45deg, var(--ui-blue), var(--ui-siman-red));
   }
   
   .add-to-cart:hover {
@@ -133,6 +143,7 @@
     flex: 0 0 250px; /* Ancho fijo de las tarjetas */
     flex: 0 0 180px; /* adjust the width of each card */
     background-color: #333; /* Color de fondo de la tarjeta */
+    background-color: var(--ui-siman-red);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 180px;
@@ -157,7 +168,8 @@
     padding: 10px;    
     margin-top: 60px;
     transition: background-color 0.3s;
-    background: linear-gradient(45deg, #524f4f, #777);
+    /*background: linear-gradient(45deg, #524f4f, #777);*/
+    background: linear-gradient(45deg, var(--ui-siman-red), var(--ui-blue));
     color: white;
     border: none;
     border-radius: 4px;
@@ -172,8 +184,9 @@
   .small-card {
     flex: 0 0 180px; /* adjust the width of each card */
     background-color: #333; /* Color de fondo de la tarjeta */
+    background-color: var(--ui-blue);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(90, 31, 35, 0.2);
     width: 180px;
     padding: 10px;
     margin: 20px;
@@ -214,7 +227,7 @@
 }
 
 .small-card-add-to-cart {
-    background-color: #444;
+    /*background-color: #444;*/
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -226,6 +239,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     background: linear-gradient(45deg, #333, #777);
+    background: linear-gradient(45deg, var(--ui-blue), var(--ui-siman-red));
     margin-left: 0; 
     margin-right: 0;
     margin-top: 40px;
