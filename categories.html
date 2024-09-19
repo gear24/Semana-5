@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="static/css/general.css">
+  <link rel="stylesheet" href="static/css/header.css">
+  <link rel="stylesheet" href="static/css/categorias.css">
+  <link rel="stylesheet" href="static/css/footer.css">
+
+
+
+  <title>Siman</title>
+</head>
+
+<body>
+  <!-- Cabecera -->
+  <header>
+    <nav id="navbar">
+      <section class="navbar-content">
+        <!-- Menú de 3x3 puntitos -->
+        <div id="toggleMenu" class="menu-icon">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <p class="brand-name" id="brand-name">
+          <a href="#">
+            Siman
+            <span class="material-symbols-outlined" style="rotate: 45deg;">stop</span>
+          </a>
+        </p>
+        <section class="nav-icons original-icons">
+          <a href="#" class="icon">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </a>
+          <a href="#" class="icon">
+            <span class="material-symbols-outlined">search</span>
+          </a>
+        </section>
+        <section class="nav-icons new-icons">
+          <a href="#" class="icon">Cuenta <i class="bi bi-person"></i></a>
+          <a href="#" class="icon">Contactanos <i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="icon">Categorias <i class="bi bi-tag"></i></a>
+        </section>
+      </section>
+    </nav>
+    <section class="hero-image" style="background-image: url('./static/img/categorias.png')">
+      <div class="hero-text">
+        <h1 id="hero-brand-name" style="color: #9f4415;">Categorias</h1>
+      </div>
+    </section>
+  </header>
+
+  <!--Contenido principal-->
+  <main>
+    <article class="cards-container">
+      <section class="small-card" id="card1" onclick="showContent(1)">
+        <figure class="small-card-image-container">
+          <img src="static/img/escolar.png" alt="Producto bonito">
+        </figure>
+
+      </section>
+      <section class="small-card" id="card2" onclick="showContent(2)">
+        <figure class="small-card-image-container">
+          <img src="static/img/linea_blanca.png" alt="Producto bonito">
+        </figure>
+      </section>
+      <section class="small-card" id="card3" onclick="showContent(3)">
+        <figure class="small-card-image-container">
+          <img src="static/img/maquillaje.png" alt="Producto bonito">
+        </figure>
+      </section>
+      <section class="small-card" id="card4" onclick="showContent(4)">
+        <figure class="small-card-image-container">
+          <img src="static/img/joyeria.png" alt="Producto bonito">
+        </figure>
+      </section>
+      <section class="small-card" id="card5" onclick="showContent(5)">
+        <figure class="small-card-image-container">
+          <img src="static/img/caballeros.png" alt="Producto bonito">
+        </figure>
+      </section>
+
+
+    </article>
+    <br>
+
+    <section class="dashboard-item medium" id="content-container">
+      <!-- Aquí se mostrará el contenido al hacer clic en las tarjetas -->
+      <article id="content1" class="content" style="background-color: #f2c94c;"> <br>
+        <label for="cateescuela">Filtrar por subcategorías</label>
+    
+        <select name="cateescuela" id="cateescuela" onchange="filterProducts('cateescuela')">
+          <option value="all">Todas las categorías</option>
+          <option value="Bolsones">Bolsones</option>
+          <option value="Cuadernos">Cuadernos</option>
+          <option value="Libros">Libros</option>
+          <option value="Estuches">Estuches</option>
+        </select>
+    
+        <article class="cards-containerC">
+    
+          <!-- Producto 1 - Bolsones -->
+          <section class="small-cardC Bolsones">
+            <figure class="small-card-image-container2">
+              <img src="static/img/maleta1.webp" alt="Bolsones">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Bolso bonito</h3>
+              <p>$499.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 2 - Cuadernos -->
+          <section class="small-cardC Cuadernos">
+            <figure class="small-card-image-container2">
+              <img src="static/img/cuaderno1.webp" alt="Cuadernos">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Cuaderno bonito</h3>
+              <p>$99.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 3 - Libros -->
+          <section class="small-cardC Libros">
+            <figure class="small-card-image-container2">
+              <img src="static/img/libro1.webp" alt="Libros">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Libro bonito</h3>
+              <p>$199.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 4 - Estuches -->
+          <section class="small-cardC Estuches">
+            <figure class="small-card-image-container2">
+              <img src="static/img/estuche1.webp" alt="Estuches">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Estuche bonito</h3>
+              <p>$49.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+        </article>
+      </article>
+    
+
+      <article id="content2" class="content" style="display: none; background-color: #c0c0c0 ;"><br>        
+        <label for="catelineaBlanca">Filtrar por subcategorías</label>
+    
+        <select name="catelineaBlanca" id="catelineaBlanca" onchange="filterProducts('catelineaBlanca')">
+          <option value="all">Todas las categorías</option>
+          <option value="refrigeradoras">refrigeradoras</option>
+          <option value="Cocinas">Cocinas</option>
+          <option value="Sartenes">Sartenes</option>
+          <option value="Hornos">Hornos</option>
+        </select>
+    
+        <article class="cards-containerC">
+    
+          <!-- Producto 1 - refrigeradoras -->
+          <section class="small-cardC refrigeradoras">
+            <figure class="small-card-image-container2">
+              <img src="static/img/maleta1.webp" alt="refrigeradoras">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Bolso bonito</h3>
+              <p>$499.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 2 - Cocinas -->
+          <section class="small-cardC Cocinas">
+            <figure class="small-card-image-container2">
+              <img src="static/img/cuaderno1.webp" alt="Cocinas">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Cuaderno bonito</h3>
+              <p>$99.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 3 - Sartenes -->
+          <section class="small-cardC Sartenes">
+            <figure class="small-card-image-container2">
+              <img src="static/img/libro1.webp" alt="Sartenes">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Libro bonito</h3>
+              <p>$199.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 4 - Hornos -->
+          <section class="small-cardC Hornos">
+            <figure class="small-card-image-container2">
+              <img src="static/img/estuche1.webp" alt="Hornos">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Estuche bonito</h3>
+              <p>$49.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+        </article>
+      </article>
+      
+      
+
+      <article id="content3" class="content" style="display: none; background-color: #f285b2 ;"><br>
+        <label for="catemaquillaje">Filtrar por subcategorías</label>
+    
+        <select name="catemaquillaje" id="catemaquillaje" onchange="filterProducts('catemaquillaje')">
+          <option value="all">Todas las categorías</option>
+          <option value="Labiales">Labiales</option>
+          <option value="Rubor">Rubor</option>
+          <option value="Contorno">Contorno</option>
+          <option value="Esmalte">Esmalte</option>
+        </select>
+    
+        <article class="cards-containerC">
+    
+          <!-- Producto 1 - Labiales -->
+          <section class="small-cardC Labiales">
+            <figure class="small-card-image-container2">
+              <img src="static/img/maleta1.webp" alt="Labiales">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Bolso bonito</h3>
+              <p>$499.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 2 - Rubor -->
+          <section class="small-cardC Rubor">
+            <figure class="small-card-image-container2">
+              <img src="static/img/cuaderno1.webp" alt="Rubor">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Cuaderno bonito</h3>
+              <p>$99.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 3 - Contorno -->
+          <section class="small-cardC Contorno">
+            <figure class="small-card-image-container2">
+              <img src="static/img/libro1.webp" alt="Contorno">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Libro bonito</h3>
+              <p>$199.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 4 - Esmalte -->
+          <section class="small-cardC Esmalte">
+            <figure class="small-card-image-container2">
+              <img src="static/img/estuche1.webp" alt="Esmalte">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Estuche bonito</h3>
+              <p>$49.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+        </article>
+      </article>
+
+      <article id="content4" class="content" style="display: none; background-color: #d9d9d9 ;"><br>
+        <label for="Joyeria">Filtrar por subcategorías</label>
+    
+        <select name="Joyeria" id="Joyeria" onchange="filterProducts('Joyeria')">
+          <option value="all">Todas las categorías</option>
+          <option value="Cadenas">Cadenas</option>
+          <option value="Anillos">Anillos</option>
+          <option value="Relojes">Relojes</option>
+          <option value="Pandoras">Pandoras</option>
+        </select>
+    
+        <article class="cards-containerC">
+    
+          <!-- Producto 1 - Cadenas -->
+          <section class="small-cardC Cadenas">
+            <figure class="small-card-image-container2">
+              <img src="static/img/maleta1.webp" alt="Cadenas">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Bolso bonito</h3>
+              <p>$499.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 2 - Anillos -->
+          <section class="small-cardC Anillos">
+            <figure class="small-card-image-container2">
+              <img src="static/img/cuaderno1.webp" alt="Anillos">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Cuaderno bonito</h3>
+              <p>$99.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 3 - Relojes -->
+          <section class="small-cardC Relojes">
+            <figure class="small-card-image-container2">
+              <img src="static/img/libro1.webp" alt="Relojes">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Libro bonito</h3>
+              <p>$199.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 4 - Pandoras -->
+          <section class="small-cardC Pandoras">
+            <figure class="small-card-image-container2">
+              <img src="static/img/estuche1.webp" alt="Pandoras">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Estuche bonito</h3>
+              <p>$49.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+        </article>
+      </article>
+
+
+      <article id="content5" class="content" style="display: none; background-color: #5d779b ;"><br>
+        <label for="Caballeros">Filtrar por subcategorías</label>
+    
+        <select name="Caballeros" id="Caballeros" onchange="filterProducts('Caballeros')">
+          <option value="all">Todas las categorías</option>
+          <option value="Zapatos">Zapatos</option>
+          <option value="Camisas">Camisas</option>
+          <option value="Corbatas">Corbatas</option>
+          <option value="Esmalte">Esmalte</option>
+        </select>
+    
+        <article class="cards-containerC">
+    
+          <!-- Producto 1 - Zapatos -->
+          <section class="small-cardC Zapatos">
+            <figure class="small-card-image-container2">
+              <img src="static/img/maleta1.webp" alt="Zapatos">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Bolso bonito</h3>
+              <p>$499.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 2 - Camisas -->
+          <section class="small-cardC Camisas">
+            <figure class="small-card-image-container2">
+              <img src="static/img/cuaderno1.webp" alt="Camisas">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Cuaderno bonito</h3>
+              <p>$99.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 3 - Corbatas -->
+          <section class="small-cardC Corbatas">
+            <figure class="small-card-image-container2">
+              <img src="static/img/libro1.webp" alt="Corbatas">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Libro bonito</h3>
+              <p>$199.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+          <!-- Producto 4 - Esmalte -->
+          <section class="small-cardC Esmalte">
+            <figure class="small-card-image-container2">
+              <img src="static/img/estuche1.webp" alt="Esmalte">
+            </figure>
+            <article class="small-card-content2">
+              <h3>Estuche bonito</h3>
+              <p>$49.99</p>
+              <button class="small-card-add-to-cart">
+                <span class="material-symbols-outlined">add</span>
+              </button>
+            </article>
+          </section>
+    
+        </article>
+      </article>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <section class="footer__about">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un equipo apasionado por el diseño y la tecnología. Nos dedicamos a crear experiencias web únicas y
+        elegantes.</p>
+    </section>
+    <section class="footer__links">
+      <h2>Enlaces Útiles</h2>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Privacidad</a></li>
+      </ul>
+    </section>
+    <section class="footer__contact">
+      <h2>Contacto</h2>
+      <p>Email: contacto@ejemplo.com</p>
+      <p>Teléfono: +123 456 7890</p>
+    </section>
+    <article class="footer__social">
+      <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+    </article>
+  </footer>
+
+
+
+  <script src="static/js/script.js"></script>
+  <script src="static/js/header.js"></script>
+  <script src="static/js/categorias.js"></script>
+</body>
+
+</html>
